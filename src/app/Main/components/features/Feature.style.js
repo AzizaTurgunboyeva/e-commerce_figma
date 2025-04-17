@@ -53,10 +53,10 @@ export const CatalogTitle = styled.div`
     }
 
     .all-catalog {
-      width: 440px;
+      width: 550px;
       order: 3;
       margin-top: 40px;
-      
+      padding:10px;
       align-self: center;
     }
   }
