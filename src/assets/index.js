@@ -1,0 +1,1 @@
+export {default as catalogImages} from "./images/catalog/index"
