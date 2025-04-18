@@ -174,6 +174,7 @@ export const MobileSwiper = styled(Swiper)`
   .card {
     display: flex;
     flex-direction: column;
+    width: 85%;
     background: #f2f2f2;
     border-radius: 12px;
     padding:2px;
@@ -186,14 +187,14 @@ export const MobileSwiper = styled(Swiper)`
       color: ${colors.main};
       text-align: left;
       padding: 20px 0px 10px 30px;
-      margin: 0;
+      /* margin: 0; */
     }
 
     .image-container {
       display: flex;
       align-items: center;
       height: 140px;
-      width: 100%;
+      width: 70%;
     
 
       img {
