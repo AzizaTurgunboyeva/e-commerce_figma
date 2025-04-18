@@ -62,11 +62,10 @@ export const CatalogWrapper = styled.div`
       display: none;
 
       @media (max-width: 768px) {
-      
         display: flex;
         margin-top: 24px;
         justify-content: center;
-        width: fit-content;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
         border-radius: 50px;
@@ -175,10 +174,9 @@ export const MobileSwiper = styled(Swiper)`
   .card {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    background: #f5f5f5;
+    background: #f2f2f2;
     border-radius: 12px;
-    padding: 0;
+    padding:2px;
     overflow: hidden;
 
     .title {
@@ -187,21 +185,21 @@ export const MobileSwiper = styled(Swiper)`
       font-family: "Roboto", sans-serif;
       color: ${colors.main};
       text-align: left;
-      padding: 20px 0 10px 20px;
+      padding: 20px 0px 10px 30px;
       margin: 0;
     }
 
     .image-container {
       display: flex;
-      justify-content: center;
       align-items: center;
       height: 140px;
       width: 100%;
-      padding: 0 20px;
+    
 
       img {
         max-width: 100%;
         max-height: 100%;
+        padding-left: 60px;
         object-fit: contain;
       }
     }
@@ -209,7 +207,8 @@ export const MobileSwiper = styled(Swiper)`
     .card-sum {
       display: flex;
       align-items: center;
-      padding: 10px 0 20px 20px;
+      padding: 0px 0px 20px 30px;
+
       margin-top: auto;
 
       p {
@@ -225,10 +224,6 @@ export const MobileSwiper = styled(Swiper)`
         height: 10px;
         object-fit: contain;
       }
-    }
-    .all-catalog {
-      width: 100%;
-
     }
   }
 `;
