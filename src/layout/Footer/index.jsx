@@ -9,7 +9,7 @@ function Footer(props) {
     return (
         <FooterWrapper>
             <div className="container flex">
-                <FirstContent mobile={"true"}>
+                <FirstContent>
                     <img className="logo" src={LogoSvg} alt='Logo Vector' />
                     <div className='info-side'>
                         <a className='phone-number' href="tel:88008904656">8 (800) 890-46-56</a>

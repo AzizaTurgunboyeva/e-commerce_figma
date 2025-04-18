@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { colors } from "@/styles/theme";
 
 export const CatalogTitle = styled.div`
+max-width: 1200px;
   margin: 40px 0;
 
   .catalog-title {
@@ -41,7 +42,7 @@ export const CatalogTitle = styled.div`
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
-
+    padding: 20px;
     .catalog-title {
       display: contents;
     }
@@ -53,10 +54,9 @@ export const CatalogTitle = styled.div`
     }
 
     .all-catalog {
-      width: 550px;
+      width: 100%;
       order: 3;
       margin-top: 40px;
-      padding:10px;
       align-self: center;
     }
   }

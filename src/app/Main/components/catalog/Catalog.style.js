@@ -15,7 +15,6 @@ export const CatalogWrapper = styled.div`
     margin-bottom: 24px;
 
     @media (max-width: 768px) {
-      /* stack title + desktop‑only link, remove gap */
       flex-direction: column;
       align-items: flex-start;
       margin-bottom: 16px;
@@ -63,9 +62,41 @@ export const CatalogWrapper = styled.div`
       display: none;
 
       @media (max-width: 768px) {
+      
         display: flex;
-        margin-top: 16px;
+        margin-top: 24px;
         justify-content: center;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 50px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        padding: 14px 48px;
+      }
+    }
+  }
+
+  .mobile-catalog-container {
+    @media (min-width: 769px) {
+      display: none;
+    }
+  }
+
+  .swiper-pagination-custom {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .swiper-pagination-bullet {
+      width: 8px;
+      height: 8px;
+      background: #d9d9d9;
+      opacity: 1;
+      margin: 0 4px;
+
+      &.swiper-pagination-bullet-active {
+        background: #000;
       }
     }
   }
@@ -130,62 +161,74 @@ export const DesktopGrid = styled.div`
 `;
 
 export const MobileSwiper = styled(Swiper)`
-  display: none;
-  padding-bottom: 16px; /* for bullets */
+  display: block;
+  padding-bottom: 0;
 
-  @media (max-width: 768px) {
-    display: block;
+  .swiper-wrapper {
+    padding-bottom: 10px;
   }
 
-  .swiper-pagination-bullet {
-    background: #000;
+  .swiper-slide {
+    height: auto;
   }
 
   .card {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background: ${colors.light};
+    flex-direction: column;
+    height: 100%;
+    background: #f5f5f5;
     border-radius: 12px;
-    padding: 20px;
+    padding: 0;
+    overflow: hidden;
 
-    .card-left {
-      p {
-        font-size: 20px;
-        font-weight: 500;
-        font-family: "Roboto", sans-serif;
-        margin-bottom: 32px;
-        color: ${colors.main};
-      }
+    .title {
+      font-size: 20px;
+      font-weight: 500;
+      font-family: "Roboto", sans-serif;
+      color: ${colors.main};
+      text-align: left;
+      padding: 20px 0 10px 20px;
+      margin: 0;
+    }
 
-      .card-sum {
-        display: flex;
-        align-items: center;
-        margin-top: 127px;
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 140px;
+      width: 100%;
+      padding: 0 20px;
 
-        p {
-          margin: 0;
-          width: 85px;
-          font-weight: 400;
-          color: #444;
-        }
-
-        img {
-          margin: 6px;
-          width: 19px;
-          height: 11px;
-          object-fit: contain;
-        }
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
       }
     }
 
-    .card-right {
+    .card-sum {
+      display: flex;
+      align-items: center;
+      padding: 10px 0 20px 20px;
+      margin-top: auto;
+
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        color: #444;
+        margin: 0;
+      }
+
       img {
-        max-width: 100%;
-        height: auto;
-        padding: 12px;
+        margin-left: 6px;
+        width: 18px;
+        height: 10px;
         object-fit: contain;
       }
+    }
+    .all-catalog {
+      width: 100%;
+
     }
   }
 `;

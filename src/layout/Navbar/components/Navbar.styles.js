@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import { colors } from '../../styles/theme';
+import { colors } from "@/styles/theme";
+
 
 export const NavbarWrapper = styled.div`
     margin-bottom: 65px;
@@ -18,18 +19,23 @@ export const TopInfoWrapper = styled.div`
 
 export const MenuItems = styled.div`
     display: flex;
-    gap: 27px;
+    flex-direction: ${props => props.mobile ? 'column' : "row"};
+    gap: ${props => props.mobile ? 'unset' : "27px"};
+    text-align: ${props => props.mobile ? 'center' : "unset"};
 
     & .link {
         text-decoration: none;
         font-size: 14px;
         font-weight: 600;
         color: ${colors.main}50;
+        padding: ${props => props.mobile ? '20px 0' : "unset"};
+        border-bottom: ${props => props.mobile ? `1px solid ${colors.main}10` : "unset"};
     }
 `;
 
 export const ContactsWrapper = styled.div`
     display: flex;
+    flex-direction: ${props => props.mobile ? "column" : "row"};
     align-items: center;
     gap: 24px;
 
@@ -109,4 +115,44 @@ export const MobNavbarWrapper = styled.div`
             gap: 26px;
         }
     }
+`;
+
+export const MobNavbarContent = styled.div`
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: ${colors.white};
+    box-shadow: 0 400px 0 ${colors.main}50;
+`;
+
+
+export const HeaderContent = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid ${colors.main}10;
+    padding: 16px;
+
+    .action-bar {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+`;
+
+
+export const Contacts = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 28px 16px;
+    gap: 28px;
+
+    button {
+        width: 100%;
+    }
+
 `;
